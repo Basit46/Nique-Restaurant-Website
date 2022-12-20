@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav > svg,
+  .nav a {
+    @apply box-content p-2 rounded-[10px] cursor-pointer hover:bg-gray-200;
+  }
+
+  .footer .links li,
+  .footer .links a {
+    @apply block text-[hsla(0,0%,100%,.6)] hover:text-[#Face8d] mb-[20px];
+  }
+}
+
+.home {
+  background-image: url("./assets/nique-bg.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.nav .menu > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px rgb(212, 210, 210) solid;
+}
+.nav .menu div svg {
+  width: 24px;
+  height: 24px;
+  font-weight: bolder;
+}
+
+.nav .menu > div > div:hover svg {
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.nav .menu > div > div > div {
+  overflow: hidden;
+}
+.nav .menu > div > div > div div {
+  transform: translateX(-50%);
+}
+
+.menuPage .leftSection {
+  background-image: url("./assets/menu-backg.webp");
+  background-position: center;
+  background-size: cover;
+}
