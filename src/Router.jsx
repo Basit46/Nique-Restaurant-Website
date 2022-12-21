@@ -11,7 +11,7 @@ import Reservation from "./pages/Reservation";
 
 const Router = () => {
   return (
-    <div className="h-screen w-screen bg-black text-white font-chillax">
+    <div className="h-screen w-screen overflow-x-hidden bg-black text-white font-chillax">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="menu" element={<Menu />} />
