@@ -27,14 +27,14 @@ const Contact = () => {
         </p>
 
         <form>
-          <label htmlFor="">Name</label>
-          <input type="text" placeholder="Enter your name" />
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" />
 
-          <label htmlFor="">Email</label>
-          <input type="text" placeholder="Your email address" />
+          <label htmlFor="email">Email</label>
+          <input type="text" id="email" placeholder="Your email address" />
 
-          <label htmlFor="">Message</label>
-          <textarea name="" placeholder="Your message"></textarea>
+          <label htmlFor="text">Message</label>
+          <textarea id="text" placeholder="Your message"></textarea>
 
           <button className="mt-[20px] mb-[100px] bg-[#f8d49e] text-black w-full py-[1rem] px-[1.5rem] rounded-[500px] font-[500]">
             SEND MESSAGE
