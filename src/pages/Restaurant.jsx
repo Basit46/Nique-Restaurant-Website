@@ -1,4 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import img1 from "../assets/nique-res1.webp";
+import img2 from "../assets/nique-res2.webp";
+import img3 from "../assets/nique-res3.webp";
+import img4 from "../assets/nique-res4.webp";
+import img5 from "../assets/nique-res5.webp";
+import img6 from "../assets/nique-res6.webp";
+import img7 from "../assets/nique-res7.webp";
 
 const Restaurant = () => {
   const gparentRef = useRef();
@@ -6,8 +13,17 @@ const Restaurant = () => {
   const childRef = useRef();
 
   const scroll = () => {
-    childRef.current.style.transform =
-      "translateX(-" + parentRef.current.offsetTop + "px)";
+    gparentRef.current.style.height = childRef.current.offsetWidth + "px";
+
+    if (
+      parentRef.current.offsetTop >
+      childRef.current.offsetWidth - window.innerWidth
+    ) {
+      return;
+    } else {
+      childRef.current.style.transform =
+        "translateX(-" + parentRef.current.offsetTop + "px)";
+    }
   };
 
   return (
@@ -21,12 +37,61 @@ const Restaurant = () => {
           className="h-[100vh] bg-black w-full  sticky top-0 overflow-x-hidden"
         >
           <div ref={childRef} className="flex w-fit ">
-            <div className="side bg-[red]"></div>
-            <div className="side bg-[blue]"></div>
-            <div className="side bg-[green]"></div>
-            <div className="side bg-[yellow]"></div>
-            <div className="side bg-[chocolate]"></div>
-            <div className="side bg-[aqua]"></div>
+            <div className="side">
+              <img
+                src={img1}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
+
+            <div className="side">
+              <img
+                src={img2}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
+
+            <div className="side">
+              <img
+                src={img3}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
+
+            <div className="side">
+              <img
+                src={img4}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
+
+            <div className="side">
+              <img
+                src={img5}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
+
+            <div className="side">
+              <img
+                src={img6}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
+
+            <div className="side">
+              <img
+                src={img7}
+                className="h-full w-full object-cover"
+                alt="restaurant"
+              />
+            </div>
           </div>
         </div>
       </div>
