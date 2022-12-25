@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
-import img1 from "../assets/nique-res1.webp";
-import img2 from "../assets/nique-res2.webp";
-import img3 from "../assets/nique-res3.webp";
-import img4 from "../assets/nique-res4.webp";
-import img5 from "../assets/nique-res5.webp";
-import img6 from "../assets/nique-res6.webp";
-import img7 from "../assets/nique-res7.webp";
+import ClassesItem from "../components/classes/ClassesItem";
 import Navbar from "../components/main/Navbar";
+import img1 from "../assets/nique-class1.webp";
+import img2 from "../assets/nique-class2.webp";
+import img3 from "../assets/nique-class3.webp";
+import img4 from "../assets/nique-class4.webp";
+import img5 from "../assets/nique-class5.webp";
 
 const Classes = () => {
   const gparentRef = useRef();
@@ -41,61 +40,41 @@ const Classes = () => {
             <Navbar />
           </div>
           <div ref={childRef} className="flex w-fit ">
-            <div className="side">
-              <img
-                src={img1}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
-
-            <div className="side">
-              <img
-                src={img2}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
-
-            <div className="side">
-              <img
-                src={img3}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
-
-            <div className="side">
-              <img
-                src={img4}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
-
-            <div className="side">
-              <img
-                src={img5}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
-
-            <div className="side">
-              <img
-                src={img6}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
-
-            <div className="side">
-              <img
-                src={img7}
-                className="h-full w-full object-cover"
-                alt="restaurant"
-              />
-            </div>
+            <ClassesItem
+              img={img1}
+              title="Asian"
+              name1="Delicious"
+              name2="Breakfast"
+              date="June 16, 2023"
+            />
+            <ClassesItem
+              img={img2}
+              title="Breakfast"
+              name1="Coffee"
+              name2="Time"
+              date="March 17, 2023"
+            />
+            <ClassesItem
+              img={img3}
+              title="Vegan"
+              name1="Vgan"
+              name2="Burger"
+              date="January 10, 2023"
+            />
+            <ClassesItem
+              img={img4}
+              title="Italian"
+              name1="Salad"
+              name2="Style"
+              date="November 19, 2023"
+            />
+            <ClassesItem
+              img={img5}
+              title="Italian"
+              name1="Homemade"
+              name2="Honey"
+              date="October 8, 2023"
+            />
           </div>
         </div>
       </div>
