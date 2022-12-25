@@ -6,6 +6,7 @@ import img4 from "../assets/nique-res4.webp";
 import img5 from "../assets/nique-res5.webp";
 import img6 from "../assets/nique-res6.webp";
 import img7 from "../assets/nique-res7.webp";
+import Navbar from "../components/main/Navbar";
 
 const Restaurant = () => {
   const gparentRef = useRef();
@@ -34,8 +35,11 @@ const Restaurant = () => {
       <div ref={gparentRef} className="bg-[tomato] h-[300vw] w-screen relative">
         <div
           ref={parentRef}
-          className="h-[100vh] bg-black w-full  sticky top-0 overflow-x-hidden"
+          className="h-[100vh] bg-black w-full sticky top-0 overflow-x-hidden"
         >
+          <div className="absolute z-50 bottom-[50px] left-0 w-full grid place-items-center">
+            <Navbar />
+          </div>
           <div ref={childRef} className="flex w-fit ">
             <div className="side">
               <img

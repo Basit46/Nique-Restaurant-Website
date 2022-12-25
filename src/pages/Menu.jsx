@@ -89,8 +89,8 @@ const Menu = () => {
   ];
 
   return (
-    <div className="menuPage w-screen h-screen flex font-chillax">
-      <div className="leftSection w-1/2 h-full flex flex-col items-center justify-between py-[50px]">
+    <div className="menuPage relative w-screen h-screen overflow-y-scroll lg:flex  font-chillax">
+      <div className="leftSection lg:sticky top-0 w-full lg:w-1/2 h-screen flex flex-col items-center justify-between py-[50px]">
         <img className="w-[92px] h-[31px]" src={logo} alt="logo" />
         <div>
           <p className="text-[#face8d] text-[5rem] leading-[90%] font-great-vibes text-center">
@@ -100,11 +100,13 @@ const Menu = () => {
             Our Menu
           </h1>
         </div>
-        <Navbar />
+        <div className="absolute top-[300px] lg:static z-50">
+          <Navbar />
+        </div>
       </div>
 
-      <div className="relative w-1/2 h-full overflow-y-scroll">
-        <ul className="fixed top-0 left-1/2 w-1/2 bg-black flex justify-center space-x-[30px] py-3 text-[1.2rem]">
+      <div className="relative w-full lg:w-1/2 h-fit bg-black">
+        <ul className="sticky top-0 left-0 w-full bg-black flex justify-center space-x-[30px] py-3 text-[1.2rem]">
           <li className="text-white/60 hover:text-white duration-100 cursor-pointer">
             <a href="#Starters">Starters</a>
           </li>
