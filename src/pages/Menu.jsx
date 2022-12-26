@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/nique-logo.svg";
+import Logo from "../components/main/Logo";
 import Navbar from "../components/main/Navbar";
 import MenuSection from "../components/menu/MenuSection";
 import img from "../assets/starters1.webp";
@@ -89,9 +89,10 @@ const Menu = () => {
   ];
 
   return (
-    <div className="menuPage relative w-screen h-screen overflow-y-scroll lg:flex  font-chillax">
+    <div className="menuPage relative w-screen h-screen overflow-y-scroll lg:flex font-chillax pb-[100px] sm:pb-0">
       <div className="leftSection lg:sticky top-0 w-full lg:w-1/2 h-[400px] lg:h-screen flex flex-col items-center justify-between pt-[50px] pb-[100px] lg:pt-[50px] lg:pb-[50px]">
-        <img className="w-[92px] h-[31px]" src={logo} alt="logo" />
+        <Logo />
+
         <div>
           <p className="text-[#face8d] text-[4rem] lg:text-[5rem] leading-[90%] font-great-vibes text-center">
             Check Out

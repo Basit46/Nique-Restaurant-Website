@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../assets/nique-logo.svg";
+import Logo from "../components/main/Logo";
 import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 
 const Reservation = () => {
   return (
-    <div className="reservation lg:flex">
+    <div className="reservation lg:flex pb-[100px] sm:pb-0">
       <div className="lg:sticky top-0 h-[400px] lg:h-screen img-box w-screen lg:w-1/2 flex flex-col justify-between items-center pt-[50px] pb-[100px] lg:pt-[50px] lg:pb-[50px]">
-        <img src={logo} alt="logo" />
+        <Logo />
         <div>
           <p className="font-great-vibes text-[4rem] lg:text-[5rem] text-[#Face8d] leading-[90%] text-center">
             Book a table
@@ -21,7 +21,7 @@ const Reservation = () => {
         </div>
       </div>
 
-      <div className="w-screen lg:w-1/2 p-[64px]">
+      <div className="w-screen lg:w-1/2 p-[20px] md:p-[64px]">
         <h1 className="text-[2.5rem] leading-[110%] font-[500]">
           Book a table
         </h1>

@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../assets/nique-logo.svg";
+import Logo from "../components/main/Logo";
 import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 
 const Contact = () => {
   return (
-    <div className="contact lg:flex h-fit w-full relative">
+    <div className="contact lg:flex h-fit w-full relative pb-[100px] sm:pb-0">
       <div className="lg:sticky top-0 img-box w-screen lg:w-1/2 h-[400px] lg:h-screen flex flex-col justify-between items-center pb-[120px] pt-[60px] lg:pb-[60px]">
-        <img src={logo} alt="logo" />
+        <Logo />
         <div>
           <p className="font-great-vibes text-[4rem] lg:text-[5rem] text-[#Face8d] leading-[90%] text-center">
             Contact
