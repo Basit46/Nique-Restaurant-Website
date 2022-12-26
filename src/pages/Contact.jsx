@@ -4,6 +4,11 @@ import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Received");
+  };
+
   return (
     <div className="contact lg:flex h-fit w-full relative pb-[100px] sm:pb-0">
       <div className="lg:sticky top-0 img-box w-screen lg:w-1/2 h-[400px] lg:h-screen flex flex-col justify-between items-center pb-[120px] pt-[60px] lg:pb-[60px]">
@@ -28,7 +33,7 @@ const Contact = () => {
           facilisi cras fermentum odio eu.
         </p>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" placeholder="Enter your name" />
 

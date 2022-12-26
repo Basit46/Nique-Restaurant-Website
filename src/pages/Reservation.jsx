@@ -4,6 +4,11 @@ import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 
 const Reservation = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Received");
+  };
+
   return (
     <div className="reservation lg:flex pb-[100px] sm:pb-0">
       <div className="lg:sticky top-0 h-[400px] lg:h-screen img-box w-screen lg:w-1/2 flex flex-col justify-between items-center pt-[50px] pb-[100px] lg:pt-[50px] lg:pb-[50px]">
@@ -31,7 +36,7 @@ const Reservation = () => {
           facilisi cras fermentum odio eu.
         </p>
 
-        <form className="my-[40px]">
+        <form onSubmit={handleSubmit} className="my-[40px]">
           <label htmlFor="name">Name</label>
           <input type="text" id="name" placeholder="Enter your name" />
 
