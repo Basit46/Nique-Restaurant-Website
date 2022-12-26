@@ -24,6 +24,10 @@
     @apply block mt-[60px] mb-[0.25rem] text-[hsla(0,0%,100%,.8)];
   }
 
+  .restaurant .side {
+    @apply h-screen w-screen lg:w-[50vw];
+  }
+
   .footer .links li,
   .footer .links a {
     @apply block text-[hsla(0,0%,100%,.6)] hover:text-[#Face8d] mb-[20px];
@@ -65,11 +69,6 @@
   background-image: url("./assets/menu-backg.webp");
   background-position: center;
   background-size: cover;
-}
-
-.restaurant .side {
-  height: 100vh;
-  width: 50vw;
 }
 
 .contact .img-box {

@@ -5,21 +5,23 @@ import Footer from "../components/main/Footer";
 
 const Reservation = () => {
   return (
-    <div className="reservation flex">
-      <div className="sticky top-0 h-screen img-box w-1/2 flex flex-col justify-between items-center py-[60px]">
+    <div className="reservation lg:flex">
+      <div className="lg:sticky top-0 h-[400px] lg:h-screen img-box w-screen lg:w-1/2 flex flex-col justify-between items-center pt-[50px] pb-[100px] lg:pt-[50px] lg:pb-[50px]">
         <img src={logo} alt="logo" />
         <div>
-          <p className="font-great-vibes text-[5rem] text-[#Face8d] leading-[90%] text-center">
+          <p className="font-great-vibes text-[4rem] lg:text-[5rem] text-[#Face8d] leading-[90%] text-center">
             Book a table
           </p>
-          <p className="font-chillax text-[5rem] font-[500] leading-[100%] text-center">
+          <p className="font-chillax text-[3.125rem] md:text-[4rem] lg:text-[5rem] font-[500] leading-[100%] text-center">
             Reservation
           </p>
         </div>
-        <Navbar />
+        <div className="fixed bottom-[20px] lg:static z-50">
+          <Navbar />
+        </div>
       </div>
 
-      <div className="w-1/2 p-[64px]">
+      <div className="w-screen lg:w-1/2 p-[64px]">
         <h1 className="text-[2.5rem] leading-[110%] font-[500]">
           Book a table
         </h1>

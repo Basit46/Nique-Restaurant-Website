@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import ClassesItem from "../components/classes/ClassesItem";
+import logo from "../assets/nique-logo.svg";
 import Navbar from "../components/main/Navbar";
 import img1 from "../assets/nique-class1.webp";
 import img2 from "../assets/nique-class2.webp";
@@ -36,6 +37,11 @@ const Classes = () => {
           ref={parentRef}
           className="h-[100vh] bg-black w-full sticky top-0 overflow-x-hidden"
         >
+          <img
+            className="absolute z-50 top-[50px] left-1/2 translate-x-[-50%] "
+            src={logo}
+            alt="logo"
+          />
           <div className="absolute z-50 bottom-[50px] left-0 w-full grid place-items-center">
             <Navbar />
           </div>

@@ -14,16 +14,20 @@ const Restaurant = () => {
   const childRef = useRef();
 
   const scroll = () => {
-    gparentRef.current.style.height = childRef.current.offsetWidth + "px";
+    if (window.innerWidth > 1024) {
+      gparentRef.current.style.height = childRef.current.offsetWidth + "px";
 
-    if (
-      parentRef.current.offsetTop >
-      childRef.current.offsetWidth - window.innerWidth
-    ) {
-      return;
+      if (
+        parentRef.current.offsetTop >
+        childRef.current.offsetWidth - window.innerWidth
+      ) {
+        return;
+      } else {
+        childRef.current.style.transform =
+          "translateX(-" + parentRef.current.offsetTop + "px)";
+      }
     } else {
-      childRef.current.style.transform =
-        "translateX(-" + parentRef.current.offsetTop + "px)";
+      return;
     }
   };
 
@@ -32,15 +36,18 @@ const Restaurant = () => {
       onScroll={scroll}
       className="restaurant h-screen w-screen overflow-x-hidden"
     >
-      <div ref={gparentRef} className="bg-[tomato] h-[300vw] w-screen relative">
+      <div
+        ref={gparentRef}
+        className="bg-[tomato] lg:h-[300vw] w-screen relative"
+      >
         <div
           ref={parentRef}
-          className="h-[100vh] bg-black w-full sticky top-0 overflow-x-hidden"
+          className="h-fit lg:h-[100vh] bg-black w-full lg:sticky top-0 overflow-x-hidden"
         >
-          <div className="absolute z-50 bottom-[50px] left-0 w-full grid place-items-center">
+          <div className="fixed lg:absolute z-50 bottom-[50px] left-0 w-full grid place-items-center">
             <Navbar />
           </div>
-          <div ref={childRef} className="flex w-fit ">
+          <div ref={childRef} className="h-fit lg:flex w-fit ">
             <div className="side">
               <img
                 src={img1}

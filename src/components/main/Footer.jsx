@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footer font-chillax flex justify-between cursor-pointer ">
-      <div className="w-[33.3%] text-[.875rem]">
+    <div className="footer font-chillax md:flex justify-between cursor-pointer ">
+      <div className="w-full md:w-[33.3%] text-[.875rem] flex flex-col md:block items-center justify-center text-center md:text-left mb-[40px]">
         <img className="mb-[20px]" src={logo} alt="logo" />
         <p>
           By{" "}
@@ -16,7 +16,7 @@ const Footer = () => {
         <p>Powered by React JS.</p>
       </div>
 
-      <div className="links w-[66.6%] flex justify-between">
+      <div className="links w-full md:w-[66.6%] flex justify-between text-center md:text-left">
         <ul className="w-1/2">
           <p className="mb-[25px]">Pages</p>
           <Link to="/menu">Menu</Link>

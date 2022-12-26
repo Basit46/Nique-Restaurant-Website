@@ -90,23 +90,23 @@ const Menu = () => {
 
   return (
     <div className="menuPage relative w-screen h-screen overflow-y-scroll lg:flex  font-chillax">
-      <div className="leftSection lg:sticky top-0 w-full lg:w-1/2 h-screen flex flex-col items-center justify-between py-[50px]">
+      <div className="leftSection lg:sticky top-0 w-full lg:w-1/2 h-[400px] lg:h-screen flex flex-col items-center justify-between pt-[50px] pb-[100px] lg:pt-[50px] lg:pb-[50px]">
         <img className="w-[92px] h-[31px]" src={logo} alt="logo" />
         <div>
-          <p className="text-[#face8d] text-[5rem] leading-[90%] font-great-vibes text-center">
+          <p className="text-[#face8d] text-[4rem] lg:text-[5rem] leading-[90%] font-great-vibes text-center">
             Check Out
           </p>
-          <h1 className=" text-[5rem] leading-[100%] font-chillax font-[500] text-center">
+          <h1 className="text-[3.125rem] md:text-[4rem] lg:text-[5rem] leading-[100%] font-chillax font-[500] text-center">
             Our Menu
           </h1>
         </div>
-        <div className="absolute top-[300px] lg:static z-50">
+        <div className="fixed bottom-[20px] lg:static z-50">
           <Navbar />
         </div>
       </div>
 
       <div className="relative w-full lg:w-1/2 h-fit bg-black">
-        <ul className="sticky top-0 left-0 w-full bg-black flex justify-center space-x-[30px] py-3 text-[1.2rem]">
+        <ul className="sticky top-0 left-0 w-full bg-black flex justify-center space-x-[15px] md:space-x-[30px] py-3 text-[1.2rem]">
           <li className="text-white/60 hover:text-white duration-100 cursor-pointer">
             <a href="#Starters">Starters</a>
           </li>
@@ -121,7 +121,7 @@ const Menu = () => {
           </li>
         </ul>
 
-        <div className="h-fit w-full px-[70px] mt-[100px]">
+        <div className="h-fit w-full px-[20px] md:px-[70px] mt-[35px] lg:mt-[60px]">
           <MenuSection name="Starters" items={startersItems} />
           <MenuSection name="Breakfast" items={breakfastItems} />
           <MenuSection name="Lunch" items={lunchItems} />

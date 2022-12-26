@@ -11,13 +11,13 @@ const MenuItems = ({ item }) => {
         />
       </div>
 
-      <div>
+      <div className="ml-[6px] md:ml-0">
         <h1 className="text-[1.5rem]">{item.name}</h1>
         <p className="text-[hsla(0,0%,100%,.6)]">
           Lorem ipsum dolor sit amet, consectetur
         </p>
       </div>
-      <p className="text-[1.25rem]">$ {item.price}</p>
+      <p className="text-[1.25rem]">${item.price}</p>
     </div>
   );
 };
