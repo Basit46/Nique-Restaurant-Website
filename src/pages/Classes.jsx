@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ClassesItem from "../components/classes/ClassesItem";
-import logo from "../assets/nique-logo.svg";
+import Logo from "../components/main/Logo";
 import Navbar from "../components/main/Navbar";
 import img1 from "../assets/nique-class1.webp";
 import img2 from "../assets/nique-class2.webp";
@@ -14,16 +14,20 @@ const Classes = () => {
   const childRef = useRef();
 
   const scroll = () => {
-    gparentRef.current.style.height = childRef.current.offsetWidth + "px";
+    if (window.innerWidth > 1024) {
+      gparentRef.current.style.height = childRef.current.offsetWidth + "px";
 
-    if (
-      parentRef.current.offsetTop >
-      childRef.current.offsetWidth - window.innerWidth
-    ) {
-      return;
+      if (
+        parentRef.current.offsetTop >
+        childRef.current.offsetWidth - window.innerWidth
+      ) {
+        return;
+      } else {
+        childRef.current.style.transform =
+          "translateX(-" + parentRef.current.offsetTop + "px)";
+      }
     } else {
-      childRef.current.style.transform =
-        "translateX(-" + parentRef.current.offsetTop + "px)";
+      return;
     }
   };
 
@@ -32,20 +36,22 @@ const Classes = () => {
       onScroll={scroll}
       className="restaurant h-screen w-screen overflow-x-hidden"
     >
-      <div ref={gparentRef} className="bg-[tomato] h-[300vw] w-screen relative">
+      <div
+        ref={gparentRef}
+        className="bg-[tomato] lg:h-[300vw] w-screen relative"
+      >
         <div
           ref={parentRef}
-          className="h-[100vh] bg-black w-full sticky top-0 overflow-x-hidden"
+          className="h-fit lg:h-[100vh] bg-black w-full lg:sticky top-0 overflow-x-hidden"
         >
-          <img
-            className="absolute z-50 top-[50px] left-1/2 translate-x-[-50%] "
-            src={logo}
-            alt="logo"
-          />
-          <div className="absolute z-50 bottom-[50px] left-0 w-full grid place-items-center">
+          <div className="fixed z-50 top-[50px] left-1/2 translate-x-[-50%] ">
+            <Logo />
+          </div>
+
+          <div className="fixed z-50 bottom-[50px] left-0 w-full grid place-items-center">
             <Navbar />
           </div>
-          <div ref={childRef} className="flex w-fit ">
+          <div ref={childRef} className="lg:flex w-fit ">
             <ClassesItem
               img={img1}
               title="Asian"
