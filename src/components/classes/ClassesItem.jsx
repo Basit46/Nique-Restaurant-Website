@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ClassesItem = ({ img, title, name1, name2, date }) => {
+const ClassesItem = ({ item }) => {
   const navigate = useNavigate();
+
+  const { img, title, name1, name2, date } = item;
 
   const handleClick = () => {
     navigate(`/classes/${name1}`);
