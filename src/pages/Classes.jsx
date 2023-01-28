@@ -69,7 +69,7 @@ const Classes = () => {
             <ClassesItem
               img={img3}
               title="Vegan"
-              name1="Vgan"
+              name1="Vegan"
               name2="Burger"
               date="January 10, 2023"
             />

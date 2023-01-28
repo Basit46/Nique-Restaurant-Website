@@ -8,6 +8,7 @@ import Shop from "./pages/Shop";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Reservation from "./pages/Reservation";
+import ClassesDetails from "./pages/ClassesDetails";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="menu" element={<Menu />} />
         <Route path="restaurant" element={<Restaurant />} />
         <Route path="classes" element={<Classes />} />
+        <Route path="classes/:classId" element={<ClassesDetails />} />
         <Route path="shop" element={<Shop />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
