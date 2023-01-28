@@ -6,6 +6,7 @@ import img5 from "../assets/nique-class5.webp";
 
 export const classesItems = [
   {
+    id: 1,
     img: img1,
     title: "Asian",
     name1: "Delicious",
@@ -13,6 +14,7 @@ export const classesItems = [
     date: "June 16, 2023",
   },
   {
+    id: 2,
     img: img2,
     title: "Breakfast",
     name1: "Coffee",
@@ -20,6 +22,7 @@ export const classesItems = [
     date: "March 17, 2023",
   },
   {
+    id: 3,
     img: img3,
     title: "Vegan",
     name1: "Vegan",
@@ -27,6 +30,7 @@ export const classesItems = [
     date: "January 10, 2023",
   },
   {
+    id: 4,
     img: img4,
     title: "Italian",
     name1: "Salad",
@@ -34,6 +38,7 @@ export const classesItems = [
     date: "November 19, 2023",
   },
   {
+    id: 5,
     img: img5,
     title: "Italian",
     name1: "Homemade",

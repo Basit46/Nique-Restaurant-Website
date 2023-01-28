@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 const ClassesItem = ({ item }) => {
   const navigate = useNavigate();
 
-  const { img, title, name1, name2, date } = item;
+  const { id, img, title, name1, name2, date } = item;
 
   const handleClick = () => {
-    navigate(`/classes/${name1}`);
+    navigate(`/classes/${id}`);
   };
 
   return (
