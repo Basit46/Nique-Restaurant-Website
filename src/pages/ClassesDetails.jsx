@@ -31,11 +31,21 @@ const ClassesDetails = () => {
       </div>
 
       <div className="w-screen lg:w-1/2 px-[24px] py-[40px] md:p-[64px] text-[hsla(0,0%,100%,.6)] ">
-        <p className="text-[1.25rem]">
-          Volutpat maecenas volutpat blandit aliquam etiam erat velit
-          scelerisque. Arcu non odio euismod lacinia. Tortor aliquam nulla
-          facilisi cras fermentum odio eu.
+        <p className="">Cooking Class</p>
+        <h1 className="text-white text-[2.5rem] leading-[110%] font-[500] my-[20px]">
+          Reserve your spot
+        </h1>
+        <p className="text-[1.125rem] leading-[160%] mb-[25px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor
+          massa id neque aliquam.
         </p>
+        <div className="flex items-center mb-[30px] space-x-[20px]">
+          <button className="bg-[#f8d49e] text-black rounded-[500px] px-[1.5rem] py-[1rem] font-[500] ">
+            BOOK A SPOT
+          </button>
+          <p className="text-white text-[1.5rem] leading-[130%]">$89</p>
+        </div>
 
         <Footer />
       </div>
