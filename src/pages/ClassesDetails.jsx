@@ -51,15 +51,15 @@ const ClassesDetails = () => {
         <div className="detailsSec mb-[30px]">
           <p className="font-great-vibes text-[#face8d] text-[4rem]">Details</p>
           <div>
-            <p>Date</p>
+            <p className="text-white text-[1.25rem]">Date</p>
             <p>June 16, 2023 8:00 PM</p>
           </div>
 
           <div>
-            <p>Teacher</p>
+            <p className="text-white text-[1.25rem]">Teacher</p>
             <span className="flex items-center">
               <img
-                className="rounded-[100px] h-[60px] w-[60px]"
+                className="rounded-[100px] h-[60px] w-[60px] mr-[5px]"
                 src={teacher}
                 alt="teacher"
               />
@@ -67,12 +67,33 @@ const ClassesDetails = () => {
             </span>
           </div>
           <div>
-            <p>Language</p>
+            <p className="text-white text-[1.25rem]">Language</p>
             <p>English</p>
           </div>
           <div>
-            <p>Location</p>
+            <p className="text-white text-[1.25rem]">Location</p>
             <p>nique. Main Street 16 10629 Berlin</p>
+          </div>
+        </div>
+
+        <div className="mb-[40px]">
+          <p className="font-great-vibes text-[#face8d] text-[4rem]">Teacher</p>
+          <div className="flex items-start">
+            <img
+              className="rounded-[100px] h-[100px] w-[100px] mr-[20px]"
+              src={teacher}
+              alt="teacher"
+            />
+            <div>
+              <p className="text-white text-[1.5rem] leading-[130%] mb-[5px]">
+                Jakob Grønberg
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Porttitor massa id neque aliquam.
+              </p>
+            </div>
           </div>
         </div>
 
