@@ -4,6 +4,7 @@ import { BsClock } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import ListItem from "../Navbar/ListItem";
 import { NavLink, useNavigate } from "react-router-dom";
+import HoverDiv from "../Navbar/HoverDiv";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -72,12 +73,7 @@ const Navbar = () => {
         onClick={() => navigate("/reservation")}
         className="booking cursor-default bg-black text-white rounded-[30px] font-bold  w-[151px] h-[50px] overflow-hidden group flex items-center"
       >
-        <div className=" w-full h-[24px] overflow-hidden">
-          <div className="group-hover:translate-y-[-50%] duration-200">
-            <p className="text-center">BOOK A TABLE</p>
-            <p className="text-center">BOOK A TABLE</p>
-          </div>
-        </div>
+        <HoverDiv text="BOOK A TABLE" />
       </div>
     </div>
   );
