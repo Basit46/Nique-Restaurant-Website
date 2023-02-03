@@ -4,6 +4,7 @@ import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 import { classesItems } from "../assets/classesItems";
 import { useParams } from "react-router-dom";
+import teacher from "../assets/nique-teacher.webp";
 
 const ClassesDetails = () => {
   const { classId } = useParams();
@@ -45,6 +46,34 @@ const ClassesDetails = () => {
             BOOK A SPOT
           </button>
           <p className="text-white text-[1.5rem] leading-[130%]">$89</p>
+        </div>
+
+        <div className="detailsSec mb-[30px]">
+          <p className="font-great-vibes text-[#face8d] text-[4rem]">Details</p>
+          <div>
+            <p>Date</p>
+            <p>June 16, 2023 8:00 PM</p>
+          </div>
+
+          <div>
+            <p>Teacher</p>
+            <span className="flex items-center">
+              <img
+                className="rounded-[100px] h-[60px] w-[60px]"
+                src={teacher}
+                alt="teacher"
+              />
+              <p>Jakob Grønberg</p>
+            </span>
+          </div>
+          <div>
+            <p>Language</p>
+            <p>English</p>
+          </div>
+          <div>
+            <p>Location</p>
+            <p>nique. Main Street 16 10629 Berlin</p>
+          </div>
         </div>
 
         <Footer />

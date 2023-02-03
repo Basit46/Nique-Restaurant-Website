@@ -32,6 +32,10 @@
   .footer .links a {
     @apply block text-[hsla(0,0%,100%,.6)] hover:text-[#Face8d] mb-[20px];
   }
+
+  .detailsSec div {
+    @apply w-full flex justify-between items-center py-[13px] border-b-[1px] border-[hsla(0,0%,100%,.1)];
+  }
 }
 
 .home {
