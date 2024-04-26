@@ -1,18 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ClassesItem = ({ item }) => {
-  const navigate = useNavigate();
-
   const { id, img, title, name1, name2, date } = item;
 
-  const handleClick = () => {
-    navigate(`/classes/${id}`);
-  };
-
   return (
-    <div
-      onClick={handleClick}
+    <Link
+      to={`/classes/${id}`}
       className="relative w-screen lg:w-[33.3vw] h-screen bg-red-600 group font-chillax cursor-pointer"
     >
       <img className="h-full w-full object-cover" src={img} alt="nique-class" />
@@ -27,7 +21,7 @@ const ClassesItem = ({ item }) => {
         </p>
         <p className="text-[hsla(0,0%,100%,.6)] font-semibold">{date}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

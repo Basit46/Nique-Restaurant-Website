@@ -3,12 +3,10 @@ import { FaBars } from "react-icons/fa";
 import { BsClock } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import ListItem from "../Navbar/ListItem";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import HoverDiv from "../Navbar/HoverDiv";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
   const [openMenu, setOpenMenu] = useState(false);
   const [openTimes, setOpenTimes] = useState(false);
 
@@ -69,12 +67,12 @@ const Navbar = () => {
         <NavLink to="/classes">Classes</NavLink>
       </ul>
 
-      <div
-        onClick={() => navigate("/reservation")}
+      <Link
+        to="/reservation"
         className="booking cursor-default bg-black text-white rounded-[30px] font-bold  w-[151px] h-[50px] overflow-hidden group flex items-center"
       >
         <HoverDiv text="BOOK A TABLE" />
-      </div>
+      </Link>
     </div>
   );
 };

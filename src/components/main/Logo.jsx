@@ -1,14 +1,13 @@
 import React from "react";
 import logoImg from "../../assets/nique-logo.svg";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/");
-  };
-  return <img onClick={handleClick} src={logoImg} alt="logo" />;
+  return (
+    <Link to="/">
+      <img src={logoImg} alt="logo" />
+    </Link>
+  );
 };
 
 export default Logo;
